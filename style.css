@@ -39,12 +39,14 @@ nav{
     color: white;
     border: solid rgb(150, 150, 150) 2px;
     border-radius: 30px;
-    overflow-y: hidden;
+    overflow: hidden;
+    position: relative;
 
     transition: all .5s ease;}
 .bar img{
-    width: 100%;
-    height: auto;}
+    width: 33.33%;
+    height: auto;
+    flex-shrink: 0;}
 .bar h3{
     align-self: center;}
     .bar:hover{
