@@ -16,9 +16,15 @@ body{
         }}
 .container{
     margin-top: 120px;
-    margin-bottom: 140px;
-    /* background-color: rgb(32, 32, 32); */
+    margin-bottom: 140px;}
+.overlay{
+    text-transform: lowercase;
+    opacity: .2;
 }
+
+
+
+
 nav{
     margin: 30px;
     text-align: center;}
@@ -92,7 +98,7 @@ nav{
 
 
 h1{
-    font-size: 48px;}
+    font-size: 60px;}
 h2{
     font-size: 40px;}
 h3{
