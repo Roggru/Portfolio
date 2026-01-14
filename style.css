@@ -26,8 +26,11 @@ body{
 
 
 nav{
-    margin: 30px;
-    text-align: center;}
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;}
 .blocks{
     display: flex;
     gap: 10px;}
@@ -107,6 +110,8 @@ h3{
     position: absolute;}
 p{
     font-size: 1.4rem;}
+.p-nav{
+    font-size: 1.2rem;}
 .pd{
     font-size: 1.2rem;}
 .pt{
