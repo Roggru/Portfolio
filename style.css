@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(15, 15, 15);
+    background-color: #0f0f0f;
     color: white;
     overflow-x: hidden;
 }
@@ -26,11 +26,21 @@ body{
 
 
 nav{
+    position: sticky;
     display: flex;
-    margin: 10px;
+    top: 0;
     justify-content: center;
     text-align: center;
-    gap: 50px;}
+    gap: 50px;
+    color: rgb(125, 125, 125);
+    background-color: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;}
+    .p-nav.active{
+        color: white;
+        border-bottom: 2px solid white;}
+section{
+    scroll-margin-top: 80px;}
 .blocks{
     display: flex;
     gap: 10px;}

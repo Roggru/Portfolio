@@ -31,3 +31,36 @@ function updateIdent(){
     }
     setTimeout(updateIdent, change ? 80 : 150);
 }
+
+
+
+const navItems = document.querySelectorAll('.p-nav');
+const sections = document.querySelectorAll('section');
+
+const options = {
+    root: null,
+    rootMargin: '-50% 0px -50% 0px',
+    threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            const activeNav = document.querySelector(`[data-section="${entry.target.id}"]`);
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+        }
+    });
+}, options);
+sections.forEach(section => observer.observe(section));
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const sectionId = item.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    });
+});
